@@ -30,7 +30,7 @@ module.exports = function(layoutData, options) {
 
   function json2jsx(json) {
     var result = layoutData;
-
+    return result;
     if (!!json.length && typeof json != 'string') {
       json.forEach(function(node) {
         result += json2jsx(node);
