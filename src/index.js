@@ -29,7 +29,7 @@ module.exports = function(layoutData, options) {
   let mock = {};
 
   function json2jsx(json) {
-    var result = '';
+    var result = layoutData;
 
     if (!!json.length && typeof json != 'string') {
       json.forEach(function(node) {
