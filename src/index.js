@@ -131,7 +131,7 @@ module.exports = function(layoutData, options) {
     })
     .join('\n');
   renderData.mockData = `var mock = ${JSON.stringify(mock)}`;
-  renderData.style = `var styles = ${JSON.stringify(style)}`;
+  renderData.style = layoutData;//`var styles = ${JSON.stringify(style)}`;
   renderData.export = `render(<Mod dataSource={mock} />);`;
 
   const prettierOpt = {
