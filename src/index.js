@@ -29,8 +29,7 @@ module.exports = function(layoutData, options) {
   let mock = {};
 
   function json2jsx(json) {
-    var result = `UIButton *btn = [[UIBytton alloc] init];`;
-    return result;
+    var result = '';
     if (!!json.length && typeof json != 'string') {
       json.forEach(function(node) {
         result += json2jsx(node);
@@ -50,7 +49,7 @@ module.exports = function(layoutData, options) {
           } else {
             innerText = json.innerText;
           }
-
+          innerText = `UIButton *btn = [[UIBytton alloc] init];`;
           result += `<Text style={styles.${className}} numberOfLines={${lines}}>${innerText}</Text>`;
 
           if (!raxImport[type]) {
