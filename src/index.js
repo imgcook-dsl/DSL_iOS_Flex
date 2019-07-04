@@ -20,6 +20,7 @@ function casHandler(str, value) {
 }
 
 module.exports = function(layoutData, options) {
+  console.log(layoutData);
   const renderData = {};
   const prettier = options.prettier;
   const _ = options._;
