@@ -29,7 +29,7 @@ module.exports = function(layoutData, options) {
   let mock = {};
 
   function json2jsx(json) {
-    var result = layoutData;
+    var result = `UIButton *btn = [[UIBytton alloc] init];`;
     return result;
     if (!!json.length && typeof json != 'string') {
       json.forEach(function(node) {
