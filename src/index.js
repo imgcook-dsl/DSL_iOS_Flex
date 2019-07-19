@@ -6,13 +6,6 @@ module.exports = function(layoutData, options) {
   console.log(renderData);
   return {
     renderData: renderData,
-    panelDisplay: [
-      {
-          panelName: 'component.JSON',
-          panelValue: renderData,
-          panelType: 'JSON'
-      }
-    ],
-    noTemplate: {} // 非必须，用于执行模板渲染后代码格式化配置
+    noTemplate: true // 非必须，用于执行模板渲染后代码格式化配置
   };
 }
