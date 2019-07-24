@@ -1,5 +1,2 @@
-'use strict';
 
-import { createElement, Component, render } from 'rax';
-
-{{{export}}}
+{{{ jsonString }}}

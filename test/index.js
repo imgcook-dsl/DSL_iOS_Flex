@@ -26,15 +26,9 @@ co(function*() {
     originData: originData
   });
   const renderData = renderInfo.renderData;
-  const ret = yield xtplRender(
-    path.resolve(__dirname, '../src/template.xtpl'),
-    renderData,
-    {}
-  );
+  const ret = renderData.jsonString;
 
   console.log(
-    prettier.format(ret, {
-      printWidth: 120
-    })
+    ret
   );
 });
