@@ -4,14 +4,14 @@ module.exports = function(layoutData, options) {
   var rawJson = JSON.stringify(layoutData)+'';
   
   // console.log(renderData);
-  renderData.jsonString = JSON.stringify(layoutData)+'';
+  renderData.layout = JSON.stringify(layoutData)+'';
   
   return {
     renderData: renderData,
     panelDisplay: [
       {
-          panelName: 'component.jsonString',
-          panelValue: renderData.jsonString,
+          panelName: 'renderData.layout',
+          panelValue: renderData.layout,
           panelType: 'string'
       }
     ],

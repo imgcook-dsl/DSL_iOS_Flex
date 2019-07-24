@@ -26,7 +26,7 @@ co(function*() {
     originData: originData
   });
   const renderData = renderInfo.renderData;
-  const ret = renderData.jsonString;
+  const ret = renderData;
 
   console.log(
     ret
