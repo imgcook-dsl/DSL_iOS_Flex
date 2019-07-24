@@ -16,19 +16,11 @@ const vm = new NodeVM({
 
 co(function*() {
   const xtplRender = thunkify(xtpl.render);
-  const code = fs.readFileSync(
-    path.resolve(__dirname, '../src/index.js'),
-    'utf8'
-  );
+  const code = fs.readFileSync(path.resolve(__dirname, '../src/index.js'),'utf8');
   const renderInfo = vm.run(code)(data, {
     prettier: prettier,
-    _: _,
-    originData: originData
+    _: _
   });
-  const renderData = renderInfo.renderData;
-  const ret = renderData;
-
-  console.log(
-    ret
-  );
+  const { json } = renderInfo.renderData;
+  console.log(json);
 });

@@ -1,5 +1,5 @@
 module.exports = function(layoutData, options) {
-  
+
   const renderData = {};
   renderData.json = JSON.stringify(layoutData);
   
